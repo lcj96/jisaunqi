@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>  
+#all{margin: 0 auto;
+width: 500px;
+height: 80px;
+text-align: center;}
+.btn{width:60px;} 
+</style>   
+</head> 
+<body> 
+
+<div id="all">
+  <form action="" name="forml" method="post"> 
+
+
+  <div>第一个数  <input type="text" name="num1" id="num1"> </div> 
+  
+  <div>第二个数  <input type="text" name="num2" id="num2"> </div>
+  
+  <div> 
+   <input type="button" class="btn" value="＋" onclick="sum('+')">   
+  
+   <input type="button" class="btn" value="-" onclick="sum('-')">    
+   
+   <input type="button" class="btn" value="×" onclick="sum('*')">   
+   
+    <input type="button" class="btn" value="÷" onclick="sum('/')">  
+   </div> 
+   <div>计算结果   <input type="text" name="result" id="result">  </div> 
+   </form> 
+</div>
+
+
+
+<script>  function sum(op){  
+ var n1 =  Number(document.getElementById("num1").value);  
+  var n2 =  Number(document.getElementById("num2").value);  
+   var r = eval(n1 + op + n2);   /*if(op == '+'){    r = n1 + n2;   }   else if(op == '-'){    r = n1 - n2;   }   else if(op == '*'){    r = n1 * n2;   }   else if(op == '/'){    r = n1 / n2;   }*/   document.getElementById("result").value = r;  } </script> 
+
+<body>
+</body>
+</html>
