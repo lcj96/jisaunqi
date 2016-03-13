@@ -1,47 +1,52 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
 
-# Folder config file
-Desktop.ini
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>简易计算器</title>
+<style>
+#tit{ margin-top:100px;
+margin-left:620px;}
+#all{margin: 0 auto;
+margin-top:100px;
+width: 500px;
+height: 80px;
+margin-top:0 auto;}
+#sym{ width:20px;}
+</style>
+</head>
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+<body>
+ <h1 id="tit">简易计算器</h1>
+ <div id="all">
+ <form action="" name="forml" method="post">
+ 	<input type="text" name="num1" id="num1" value="" />
+    <input type="text" name="sym" id="sym" value="" />
+    <input type="text" name="num2" id="num2" value="" />
+ 	<input type="button" name="result" value="点击计算" onclick="sum()" />
+ 
+ </form>
+ </div>
+<script type="text/javascript" >
+ 	function sum(){
+		var n1=Number(document.getElementById("num1").value)
+		var n4=document.getElementById("sym").value
+		var n2=Number(document.getElementById("num2").value)
+		
+		
+		if(n4=="+"){n3=n1+n2;
+			}
+			else if(n4=="-"){
+				n3=n1-n2;}
+			else if(n4=="*"){
+				n3=n1*n2;}
+			else if(n4=="/"){
+				n3=n1/n2;}		
+		
+		alert("结果为："+n3);
+		
+		
+		}
+</script>
+</body>
+</html>
